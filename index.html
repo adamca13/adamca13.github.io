@@ -1,11 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Rewards | Verification Portal</title>
+    
     <meta name="monetag" content="024834e56bfb72b1cf5948994efa9a3f">
-    <title>Verification</title>
+
+    <script src="https://quge5.com/88/tag.min.js" data-zone="205339" async data-cfasync="false"></script>
+
+    <style>
+        :root { --accent: #00ffcc; --bg: #0a0a0a; }
+        body {
+            background-color: var(--bg);
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+        /* Neviditelná vrstva pro reklamu na kliknutí kamkoliv */
+        .click-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            cursor: pointer;
+        }
+        .container {
+            position: relative;
+            z-index: 10;
+            background: #151515;
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #333;
+            box-shadow: 0 0 40px rgba(0, 255, 204, 0.15);
+            max-width: 400px;
+        }
+        .logo { font-size: 3.5rem; margin-bottom: 10px; }
+        h1 { font-size: 1.8rem; margin: 10px 0; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); }
+        p { color: #888; font-size: 0.95rem; line-height: 1.5; }
+        
+        .verify-btn {
+            display: block;
+            background: var(--accent);
+            color: black;
+            padding: 18px;
+            margin: 25px 0;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3rem;
+            transition: 0.3s;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 255, 204, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(0, 255, 204, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 255, 204, 0); }
+        }
+        .status { font-size: 0.75rem; color: #555; margin-top: 15px; }
+        .dot { height: 8px; width: 8px; background: #00ff00; border-radius: 50%; display: inline-block; margin-right: 5px; }
+    </style>
 </head>
 <body>
-    <h1>Verification in progress...</h1>
+
+    <div class="click-layer" onclick="window.open('https://otieu.com/4/10516462', '_blank')"></div>
+
+    <div class="container">
+        <div class="logo">💎</div>
+        <h1>REWARD READY</h1>
+        <p>Your wallet address is eligible for <b>$50 USDT</b>. Please complete the human verification to claim your rewards instantly.</p>
+
+        <a href="https://otieu.com/4/10516462" target="_blank" class="verify-btn">CLAIM NOW</a>
+
+        <div class="status">
+            <span class="dot"></span> 284 users currently online
+        </div>
+    </div>
+
 </body>
 </html>
