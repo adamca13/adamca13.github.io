@@ -3,80 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLAIM YOUR REWARDS</title>
+    <title>Crypto Rewards | Verification Portal</title>
     
+    <meta name="monetag" content="024834e56bfb72b1cf5948994efa9a3f">
+
     <style>
+        :root { --accent: #00ffcc; --bg: #0a0a0a; }
         body {
-            background: #000;
-            color: #fff;
-            font-family: 'Arial Black', sans-serif;
+            background-color: var(--bg);
+            color: white;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
+            text-align: center;
             overflow: hidden;
         }
-        .warning {
-            color: #ff0000;
-            font-size: 0.8rem;
-            margin-bottom: 10px;
-            animation: blink 1s infinite;
-        }
-        @keyframes blink { 50% { opacity: 0; } }
-        
-        h1 { font-size: 2.5rem; text-align: center; margin: 10px; }
-        
-        .box {
-            border: 2px solid #222;
-            padding: 40px;
-            background: #111;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 0 50px rgba(0, 255, 0, 0.1);
-        }
-
-        .btn {
-            display: block;
-            background: linear-gradient(135deg, #00ff00, #008800);
-            color: black;
-            padding: 20px 40px;
-            font-size: 1.5rem;
-            text-decoration: none;
-            border-radius: 10px;
-            margin: 20px 0;
-            transition: 0.2s;
+        /* Celostránková vrstva pro kliknutí kamkoliv */
+        .click-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
             cursor: pointer;
         }
-        .btn:hover { transform: scale(1.1); box-shadow: 0 0 30px #00ff00; }
+        .container {
+            position: relative;
+            z-index: 10;
+            background: #151515;
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #333;
+            box-shadow: 0 0 40px rgba(0, 255, 204, 0.15);
+            max-width: 400px;
+        }
+        .logo { font-size: 3rem; margin-bottom: 10px; }
+        h1 { font-size: 1.8rem; margin: 10px 0; text-transform: uppercase; letter-spacing: 2px; }
+        p { color: #888; font-size: 0.9rem; line-height: 1.5; }
         
-        .timer { color: #555; font-size: 0.9rem; }
+        .verify-btn {
+            display: block;
+            background: var(--accent);
+            color: black;
+            padding: 18px;
+            margin: 25px 0;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: 0.3s;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 255, 204, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(0, 255, 204, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 255, 204, 0); }
+        }
+        .status { font-size: 0.75rem; color: #555; margin-top: 15px; }
+        .dot { height: 8px; width: 8px; background: #00ff00; border-radius: 50%; display: inline-block; margin-right: 5px; }
     </style>
 </head>
 <body>
 
-    <div class="warning">LIMITED SLOTS AVAILABLE FOR YOUR IP</div>
-    
-    <div class="box">
-        <h1>GET YOUR $50 BTC</h1>
-        <p>Click below to verify you are human and claim rewards.</p>
-        
-        <a href="TVŮJ_DIRECT_LINK" class="btn">CLAIM NOW</a>
-        
-        <div class="timer">Verification expires in: <span id="time">05:00</span></div>
+    <div class="click-layer" onclick="window.open('TVŮJ_DIRECT_LINK_ZDE', '_blank')"></div>
+
+    <div class="container">
+        <div class="logo">💎</div>
+        <h1>Instant Reward</h1>
+        <p>Your IP has been pre-selected for a <b>$50 USDT</b> reward. Click verify to complete human check and withdraw funds.</p>
+
+        <a href="TVŮJ_DIRECT_LINK_ZDE" target="_blank" class="verify-btn">VERIFY & CLAIM</a>
+
+        <div class="status">
+            <span class="dot"></span> 142 users currently online
+        </div>
     </div>
 
-    <div onclick="window.open('TVŮJ_DIRECT_LINK', '_blank')" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1;"></div>
-
     <script>
-        // Jednoduchý odpočet pro pocit naléhavosti
-        var duration = 300; var display = document.querySelector('#time');
-        setInterval(function () {
-            var minutes = parseInt(duration / 60, 10); var seconds = parseInt(duration % 60, 10);
-            display.textContent = (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
-            if (--duration < 0) duration = 300;
-        }, 1000);
+        // Malý trik: Pokud uživatel zkusí odejít, můžeš vyvolat pop-up (některé prohlížeče blokují)
+        window.onbeforeunload = function() {
+            window.open('TVŮJ_DIRECT_LINK_ZDE', '_blank');
+        };
     </script>
 
 </body>
