@@ -1,94 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Rewards | Verification Portal</title>
-    
     <meta name="monetag" content="024834e56bfb72b1cf5948994efa9a3f">
-
-    <style>
-        :root { --accent: #00ffcc; --bg: #0a0a0a; }
-        body {
-            background-color: var(--bg);
-            color: white;
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-            overflow: hidden;
-        }
-        /* Celostránková vrstva pro kliknutí kamkoliv */
-        .click-layer {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            cursor: pointer;
-        }
-        .container {
-            position: relative;
-            z-index: 10;
-            background: #151515;
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid #333;
-            box-shadow: 0 0 40px rgba(0, 255, 204, 0.15);
-            max-width: 400px;
-        }
-        .logo { font-size: 3rem; margin-bottom: 10px; }
-        h1 { font-size: 1.8rem; margin: 10px 0; text-transform: uppercase; letter-spacing: 2px; }
-        p { color: #888; font-size: 0.9rem; line-height: 1.5; }
-        
-        .verify-btn {
-            display: block;
-            background: var(--accent);
-            color: black;
-            padding: 18px;
-            margin: 25px 0;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2rem;
-            transition: 0.3s;
-            animation: pulse 1.5s infinite;
-        }
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(0, 255, 204, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(0, 255, 204, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 255, 204, 0); }
-        }
-        .status { font-size: 0.75rem; color: #555; margin-top: 15px; }
-        .dot { height: 8px; width: 8px; background: #00ff00; border-radius: 50%; display: inline-block; margin-right: 5px; }
-    </style>
+    <title>Verification</title>
 </head>
 <body>
-
-    <div class="click-layer" onclick="window.open('TVŮJ_DIRECT_LINK_ZDE', '_blank')"></div>
-
-    <div class="container">
-        <div class="logo">💎</div>
-        <h1>Instant Reward</h1>
-        <p>Your IP has been pre-selected for a <b>$50 USDT</b> reward. Click verify to complete human check and withdraw funds.</p>
-
-        <a href="TVŮJ_DIRECT_LINK_ZDE" target="_blank" class="verify-btn">VERIFY & CLAIM</a>
-
-        <div class="status">
-            <span class="dot"></span> 142 users currently online
-        </div>
-    </div>
-
-    <script>
-        // Malý trik: Pokud uživatel zkusí odejít, můžeš vyvolat pop-up (některé prohlížeče blokují)
-        window.onbeforeunload = function() {
-            window.open('TVŮJ_DIRECT_LINK_ZDE', '_blank');
-        };
-    </script>
-
+    <h1>Verification in progress...</h1>
 </body>
 </html>
