@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLAIM YOUR REWARDS</title>
+    
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+            font-family: 'Arial Black', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .warning {
+            color: #ff0000;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink { 50% { opacity: 0; } }
+        
+        h1 { font-size: 2.5rem; text-align: center; margin: 10px; }
+        
+        .box {
+            border: 2px solid #222;
+            padding: 40px;
+            background: #111;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 0 50px rgba(0, 255, 0, 0.1);
+        }
+
+        .btn {
+            display: block;
+            background: linear-gradient(135deg, #00ff00, #008800);
+            color: black;
+            padding: 20px 40px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            border-radius: 10px;
+            margin: 20px 0;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+        .btn:hover { transform: scale(1.1); box-shadow: 0 0 30px #00ff00; }
+        
+        .timer { color: #555; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <div class="warning">LIMITED SLOTS AVAILABLE FOR YOUR IP</div>
+    
+    <div class="box">
+        <h1>GET YOUR $50 BTC</h1>
+        <p>Click below to verify you are human and claim rewards.</p>
+        
+        <a href="TVŮJ_DIRECT_LINK" class="btn">CLAIM NOW</a>
+        
+        <div class="timer">Verification expires in: <span id="time">05:00</span></div>
+    </div>
+
+    <div onclick="window.open('TVŮJ_DIRECT_LINK', '_blank')" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1;"></div>
+
+    <script>
+        // Jednoduchý odpočet pro pocit naléhavosti
+        var duration = 300; var display = document.querySelector('#time');
+        setInterval(function () {
+            var minutes = parseInt(duration / 60, 10); var seconds = parseInt(duration % 60, 10);
+            display.textContent = (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
+            if (--duration < 0) duration = 300;
+        }, 1000);
+    </script>
+
+</body>
+</html>
