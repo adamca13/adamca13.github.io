@@ -37,7 +37,7 @@
             flex-direction: column;
             align-items: center; 
             text-align: center;
-            padding: 20px 0 120px 0; 
+            padding: 10px 0 160px 0; 
             overflow-x: hidden;
         }
         .click-layer { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; cursor: pointer; }
@@ -45,45 +45,57 @@
             position: relative; 
             z-index: 10; 
             background: #151515; 
-            padding: 25px; 
+            padding: 20px; 
             border-radius: 20px; 
             border: 1px solid #333; 
             box-shadow: 0 0 40px rgba(0, 255, 204, 0.15); 
-            max-width: 350px;
-            margin: 20px 0;
+            max-width: 360px;
+            margin: 15px 0;
         }
-        .logo { font-size: 2.5rem; margin-bottom: 5px; }
-        h1 { font-size: 1.5rem; margin: 5px 0; color: var(--accent); }
+        .logo { font-size: 2.2rem; margin-bottom: 5px; }
+        h1 { font-size: 1.4rem; margin: 5px 0; color: var(--accent); }
         .verify-btn { 
             display: block; 
             background: var(--accent); 
             color: black; 
-            padding: 15px; 
+            padding: 18px; 
             margin: 15px 0; 
-            border-radius: 10px; 
+            border-radius: 12px; 
             text-decoration: none; 
             font-weight: bold; 
-            font-size: 1.1rem; 
+            font-size: 1.2rem; 
             animation: pulse 1.5s infinite; 
+            position: relative;
+            z-index: 20;
         }
         @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(0, 255, 204, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(0, 255, 204, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 255, 204, 0); } }
         
-        .ad-space { margin: 15px 0; display: inline-block; position: relative; z-index: 5; }
-        .new-ad-unit { width: 100%; max-width: 400px; margin: 10px auto; z-index: 10; position: relative; }
+        .ad-unit-wrapper { width: 100%; max-width: 450px; margin: 8px auto; z-index: 10; position: relative; }
+        .zerads-space { margin: 10px 0; display: inline-block; position: relative; z-index: 5; line-height: 0; }
     </style>
 </head>
 <body>
 
     <div class="click-layer" onclick="window.open('https://otieu.com/4/10516462', '_blank')"></div>
 
-    <div class="ad-space">
+    <div class="zerads-space">
         <iframe src="https://zerads.com/ad/ad.php?width=300&ref=10567" width="300" height="250" scrolling="no" frameborder="0"></iframe>
     </div>
 
-    <div class="new-ad-unit">
-        <div id="frame" style="width: 100%;margin: auto;position: relative;">
-            <iframe data-aa='2432163' src='//acceptable.a-ads.com/2432163/?size=Adaptive' style='border:0; padding:0; width:100%; height:auto; min-height:100px; overflow:hidden; display: block; margin: auto'></iframe>
-        </div>
+    <div class="ad-unit-wrapper">
+        <iframe data-aa='2432163' src='//acceptable.a-ads.com/2432163/?size=Adaptive' style='border:0; padding:0; width:95%; height:auto; min-height:100px; overflow:hidden; display: block; margin: auto'></iframe>
+    </div>
+
+    <div class="zerads-space">
+        <iframe src="https://zerads.com/ad/ad.php?width=300&ref=10567" width="300" height="250" scrolling="no" frameborder="0"></iframe>
+    </div>
+
+    <div class="ad-unit-wrapper">
+        <iframe data-aa='2432166' src='//acceptable.a-ads.com/2432166/?size=Adaptive' style='border:0; padding:0; width:95%; height:auto; min-height:100px; overflow:hidden; display: block; margin: auto'></iframe>
+    </div>
+
+    <div class="zerads-space">
+        <iframe src="https://zerads.com/ad/ad.php?width=300&ref=10567" width="300" height="250" scrolling="no" frameborder="0"></iframe>
     </div>
 
     <div class="container">
@@ -91,28 +103,23 @@
         <h1>REWARD READY</h1>
         <p>Your wallet address is eligible for <b>$50 USDT</b>.</p>
 
-        <div class="ad-space">
+        <div class="zerads-space">
             <iframe src="https://zerads.com/ad/ad.php?width=300&ref=10567" width="300" height="250" scrolling="no" frameborder="0"></iframe>
         </div>
 
         <a href="https://otieu.com/4/10516462" target="_blank" class="verify-btn">CLAIM NOW</a>
     </div>
 
-    <div class="ad-space">
+    <div class="zerads-space">
         <iframe src="https://zerads.com/ad/ad.php?width=300&ref=10567" width="300" height="250" scrolling="no" frameborder="0"></iframe>
     </div>
 
-    <div style="position: fixed; bottom: 0; left: 0; width: 100%; z-index: 99999; background: rgba(10,10,10,0.9);">
-        <input autocomplete="off" type="checkbox" id="aadsstickymltz83vs" hidden />
-        <div>
-            <div style="width:100%;height:auto;text-align:center;font-size:0;position:relative;">
-                <label for="aadsstickymltz83vs" style="top: -30px; right:10px; position: absolute; border-radius: 4px; background: #eee; padding: 4px; cursor:pointer; z-index: 100000;">
-                    <svg fill="#000" height="12px" width="12px" viewBox="0 0 490 490"><polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 "/></svg>
-                </label>
-                <div style="width: 100%; margin: auto; position: relative; background: #000;">
-                    <iframe data-aa="2428036" src="//acceptable.a-ads.com/2428036/?size=Adaptive" style="border:0; padding:0; width:100%; height:100px; overflow:hidden; margin: auto"></iframe>
-                </div>
-            </div>
+    <div style="position: fixed; bottom: 0; left: 0; width: 100%; z-index: 99999; background: #000; border-top: 1px solid #00ffcc;">
+        <input autocomplete="off" type="checkbox" id="close-sticky" hidden />
+        <div style="width:100%; text-align:center; position:relative; padding: 5px 0;">
+            <label for="close-sticky" style="top: -20px; right:10px; position: absolute; background: #00ffcc; color: #000; border-radius: 50%; width: 22px; height: 22px; line-height: 22px; cursor:pointer; font-weight: bold; font-size: 12px; z-index: 100000;">X</label>
+            <style>#close-sticky:checked + div { display: none; }</style>
+            <iframe data-aa="2428036" src="//acceptable.a-ads.com/2428036/?size=Adaptive" style="border:0; padding:0; width:100%; height:90px; overflow:hidden; margin: auto"></iframe>
         </div>
     </div>
 
