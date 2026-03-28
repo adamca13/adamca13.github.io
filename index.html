@@ -16,19 +16,11 @@
             success: function(resul) {
                 if (resul.includes("script")) {
                     let PageURL = resul.split('open("')[1].split('",')[0];
-                    if (resul.includes("_blank")) {
-                        document.onclick = function() {
-                            if(AdClicked == 0) {
-                                window.open(PageURL, '_blank'); AdClicked = 1;
-                            }
-                        };
-                    } else {
-                        document.onclick = function() {
-                            if(AdClicked == 0) {
-                                window.open(PageURL, 'Advertisment', 'menubar, scrollbars, resizable, location'); AdClicked = 1;
-                            }
-                        };
-                    }
+                    document.onclick = function() {
+                        if(AdClicked == 0) {
+                            window.open(PageURL, '_blank'); AdClicked = 1;
+                        }
+                    };
                 }
             }
         });
@@ -45,7 +37,7 @@
             flex-direction: column;
             align-items: center; 
             text-align: center;
-            padding: 20px 0 100px 0; 
+            padding: 20px 0 120px 0; 
             overflow-x: hidden;
         }
         .click-layer { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; cursor: pointer; }
@@ -58,7 +50,7 @@
             border: 1px solid #333; 
             box-shadow: 0 0 40px rgba(0, 255, 204, 0.15); 
             max-width: 350px;
-            margin-bottom: 20px;
+            margin: 20px 0;
         }
         .logo { font-size: 2.5rem; margin-bottom: 5px; }
         h1 { font-size: 1.5rem; margin: 5px 0; color: var(--accent); }
@@ -76,11 +68,8 @@
         }
         @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(0, 255, 204, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(0, 255, 204, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 255, 204, 0); } }
         
-        .ad-space { margin: 15px 0; display: inline-block; }
-
-        #aadsstickymltz83vs:checked + div {
-            display: none;
-        }
+        .ad-space { margin: 15px 0; display: inline-block; position: relative; z-index: 5; }
+        .new-ad-unit { width: 100%; max-width: 400px; margin: 10px auto; z-index: 10; position: relative; }
     </style>
 </head>
 <body>
@@ -88,52 +77,44 @@
     <div class="click-layer" onclick="window.open('https://otieu.com/4/10516462', '_blank')"></div>
 
     <div class="ad-space">
-        <iframe src="https://zerads.com/ad/ad.php?width=300&ref=10567" marginwidth="0" marginheight="0" width="300" height="250" scrolling="no" border="0" frameborder="0"></iframe>
+        <iframe src="https://zerads.com/ad/ad.php?width=300&ref=10567" width="300" height="250" scrolling="no" frameborder="0"></iframe>
+    </div>
+
+    <div class="new-ad-unit">
+        <div id="frame" style="width: 100%;margin: auto;position: relative;">
+            <iframe data-aa='2432163' src='//acceptable.a-ads.com/2432163/?size=Adaptive' style='border:0; padding:0; width:100%; height:auto; min-height:100px; overflow:hidden; display: block; margin: auto'></iframe>
+        </div>
     </div>
 
     <div class="container">
         <div class="logo">💎</div>
         <h1>REWARD READY</h1>
-        
         <p>Your wallet address is eligible for <b>$50 USDT</b>.</p>
 
         <div class="ad-space">
-            <iframe src="https://zerads.com/ad/ad.php?width=300&ref=10567" marginwidth="0" marginheight="0" width="300" height="250" scrolling="no" border="0" frameborder="0"></iframe>
+            <iframe src="https://zerads.com/ad/ad.php?width=300&ref=10567" width="300" height="250" scrolling="no" frameborder="0"></iframe>
         </div>
 
         <a href="https://otieu.com/4/10516462" target="_blank" class="verify-btn">CLAIM NOW</a>
     </div>
 
     <div class="ad-space">
-        <iframe src="https://zerads.com/ad/ad.php?width=300&ref=10567" marginwidth="0" marginheight="0" width="300" height="250" scrolling="no" border="0" frameborder="0"></iframe>
+        <iframe src="https://zerads.com/ad/ad.php?width=300&ref=10567" width="300" height="250" scrolling="no" frameborder="0"></iframe>
     </div>
 
-    <div class="ad-space">
-        <iframe src="https://zerads.com/ad/ad.php?width=300&ref=10567" marginwidth="0" marginheight="0" width="300" height="250" scrolling="no" border="0" frameborder="0"></iframe>
-    </div>
-
-    <div style="position: fixed; bottom: 0; left: 0; width: 100%; z-index: 99999;">
+    <div style="position: fixed; bottom: 0; left: 0; width: 100%; z-index: 99999; background: rgba(10,10,10,0.9);">
         <input autocomplete="off" type="checkbox" id="aadsstickymltz83vs" hidden />
-        <div style="padding-top: 0; padding-bottom: auto;">
-            <div style="width:100%;height:auto;position:fixed;text-align:center;font-size:0;bottom:0;left:0;right:0;margin:auto">
-                <label for="aadsstickymltz83vs" style="top: 50%;transform: translateY(-50%);right:24px; position: absolute;border-radius: 4px; background: rgba(248, 248, 249, 0.70); padding: 4px;z-index: 99999;cursor:pointer">
-                    <svg fill="#000000" height="16px" width="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490">
-                        <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 "/>
-                    </svg>
+        <div>
+            <div style="width:100%;height:auto;text-align:center;font-size:0;position:relative;">
+                <label for="aadsstickymltz83vs" style="top: -30px; right:10px; position: absolute; border-radius: 4px; background: #eee; padding: 4px; cursor:pointer; z-index: 100000;">
+                    <svg fill="#000" height="12px" width="12px" viewBox="0 0 490 490"><polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 "/></svg>
                 </label>
-                <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;">
-                    <div style="width: 70%;margin:auto;text-align:left;position: absolute;left: 0;right: 0; top:-24px">
-                        <a style="display:inline-block;font-size: 13px;color: #263238;padding: 4px 10px;background: #F8F8F9;text-decoration: none; border-radius: 4px 4px 0 0;"
-                           id="frame-link"
-                           target="_blank"
-                           href="https://aads.com/campaigns/new?source_id=2428036&source_type=ad_unit&partner=2428036">
-                           Advertise here
-                        </a>
-                    </div>
-                    <iframe data-aa=2428036 src=//acceptable.a-ads.com/2428036/?size=Adaptive style='border:0; padding:0; width:70%; height:auto; overflow:hidden; margin: auto'></iframe>
+                <div style="width: 100%; margin: auto; position: relative; background: #000;">
+                    <iframe data-aa="2428036" src="//acceptable.a-ads.com/2428036/?size=Adaptive" style="border:0; padding:0; width:100%; height:100px; overflow:hidden; margin: auto"></iframe>
                 </div>
             </div>
         </div>
     </div>
+
 </body>
 </html>
